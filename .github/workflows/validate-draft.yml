@@ -16,6 +16,6 @@ jobs:
       - name: Validate Quest
         uses: trywilco/uploadQuestAction@main
         with:
-          quest-editor-user-token: ${{ secrets.QUESTS_EDITOR_TOKEN }}
+          quest-editor-user-token: 6eowmkxwybozhbst4x58zjkbj8elo41w
           quest-editor-user-email: noa.plashkes@wilcohq.com
           only-validate: true
