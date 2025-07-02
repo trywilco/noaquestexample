@@ -1,15 +1,15 @@
-id: funneldrop_fixing_bug_pr
+id: 2_Draw_a_Circle
 learningObjectives: 
-- Fixing a bug 
+- Draw a Circle
 hints:
-- Try to inspect the problematic view and see where it is on the screen
+- Use the circle tool
 startFlow:
   do:
   - actionId: bot_message
     params:
       person: keen
       messages:
-      - text: "OK, I think we have everything we need. Can you please **fix the code** and **open a PR**, so we can release a new version to production?"
+      - text: "Ok, now - on the bottom right of the toolbar, you'll see a circle tool. Use it to draw a big circle on your artboard. once you're done, let me know!"
         delay: 1500
 githubActions:
   frontend:
