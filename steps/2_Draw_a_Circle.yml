@@ -11,8 +11,6 @@ startFlow:
       messages:
       - text: "Ok, now - on the bottom right of the toolbar, you'll see a circle tool. Use it to draw a big circle on your artboard. once you're done, let me know!"
         delay: 1500
-startFlow:
-  do:
   - actionId: ready_message
     params:
       person: keen

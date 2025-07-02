@@ -13,8 +13,6 @@ startFlow:
         delay: 2000
       - text: "Once you're ready, please visit paintJS.app. let me know while you're finished"
         delay: 3500
-startFlow:
-  do:
   - actionId: ready_message
     params:
       person: keen

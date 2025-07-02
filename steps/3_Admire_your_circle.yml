@@ -9,8 +9,6 @@ startFlow:
       messages:
       - text: "Wonderful! You have just created a beautiful circle. Bask in its glory. Once you're done - pat yourself on the back. You earned it. Are you ready?"
         delay: 1500
-startFlow:
-  do:
   - actionId: ready_message
     params:
       person: keen
