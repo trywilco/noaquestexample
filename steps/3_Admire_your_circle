@@ -1,47 +1,21 @@
-id: funneldrop_reproduce_locally
+id: 3_Admire_your_circle
 learningObjectives: 
-- Reproducing a bug locally 
-hints:
-- All modern web browsers can show you what your website looks like on mobile, so
-  you'll be able to easily debug and develop for mobile. You can use the developer
-  tools to see it.
+- Congratulate yourself on a job well done
 startFlow:
   do:
   - actionId: bot_message
     params:
       person: keen
       messages:
-      - text: "Now that we know which users are affected, go ahead and fix the bug!"
-        delay: 1300
-      - text: "Only, you know, don’t—you might break something"
-        delay: 1400
-      - text: "It’s not that I don’t trust you, but the management definitely doesn’t, so please begin by **reproducing the bug locally** and sending me the **URL of the path** where you saw the issue. Then we’ll try to fix it on your machine, and only if it works, we’ll fix it in production."
-        delay: 3500
+      - text: "Wonderful! You have just created a beautiful circle. Bask in its glory. Once you're done - pat yourself on the back. You earned it. Are you ready?"
+        delay: 1500
+startFlow:
+  do:
+  - actionId: ready_message
+    params:
+      person: keen
 trigger:
-  type: user_message
-  params: 
-    person: keen
+  type: user_ready_response
   flowNode:
-    if:
-      conditions:
-      - conditionId: text_match_regex
-        params:
-          text: "${userMessageText}"
-          regex: ".*localhost.*@"
-      then:
-        do:
-        - actionId: bot_message
-          params:
-            person: keen
-            messages:
-            - text: "Wow, that is indeed a problematic screen! Looks like we forgot about mobile devices when we created this screen."
-              delay: 1500
-        - actionId: finish_step
-      else:
-        do:
-        - actionId: bot_message
-          params:
-            person: keen
-            messages:
-            - text: "Umm, that doesn't look right. Maybe it's a different URL?"
-              delay: 1400
+    do:
+      - actionId: finish_step
