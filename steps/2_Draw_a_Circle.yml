@@ -20,4 +20,4 @@ trigger:
   type: user_ready_response
   flowNode:
     do:
-      - actionId: finish_step
+    - actionId: finish_step
